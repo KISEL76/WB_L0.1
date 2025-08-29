@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WB Orders Viewer</title>
+  <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+<header><h1>WB Orders Viewer</h1></header>
+
+<main>
+  <div class="card">
+    <div class="search">
+      <input id="orderId" placeholder="Введите order_uid" />
+      <button id="btn">Найти</button>
+    </div>
+    <p class="muted" style="margin:8px 2px 0;">API: <code>GET /orders/{order_uid}</code></p>
+  </div>
+
+  <div id="result" class="row" style="margin-top:14px; display:none;">
+    <div class="card" style="flex:1 1 360px;">
+      <h3 style="margin:0 0 8px 0;">Заказ</h3>
+      <div class="grid">
+        <div class="kv"><span>Order UID</span><b id="ord_uid">—</b></div>
+        <div class="kv"><span>Track</span><b id="ord_track">—</b></div>
+        <div class="kv"><span>Entry</span><b id="ord_entry">—</b></div>
+        <div class="kv"><span>Locale</span><b id="ord_locale">—</b></div>
+        <div class="kv"><span>Customer</span><b id="ord_customer">—</b></div>
+        <div class="kv"><span>Service</span><b id="ord_service">—</b></div>
+        <div class="kv"><span>Created</span><b id="ord_date">—</b></div>
+      </div>
+    </div>
+
+    <div class="card" style="flex:1 1 360px;">
+      <h3 style="margin:0 0 8px 0;">Доставка</h3>
+      <div class="grid">
+        <div class="kv"><span>Имя</span><b id="del_name">—</b></div>
+        <div class="kv"><span>Телефон</span><b id="del_phone">—</b></div>
+        <div class="kv"><span>Адрес</span><b id="del_addr">—</b></div>
+        <div class="kv"><span>Город</span><b id="del_city">—</b></div>
+        <div class="kv"><span>Регион</span><b id="del_region">—</b></div>
+        <div class="kv"><span>E-mail</span><b id="del_email">—</b></div>
+        <div class="kv"><span>ZIP</span><b id="del_zip">—</b></div>
+      </div>
+    </div>
+
+    <div class="card" style="flex:1 1 360px;">
+      <h3 style="margin:0 0 8px 0;">Оплата</h3>
+      <div class="grid">
+        <div class="kv"><span>Transaction</span><b id="pay_tx">—</b></div>
+        <div class="kv"><span>Amount</span><b id="pay_amount">—</b></div>
+        <div class="kv"><span>Currency</span><b id="pay_cur">—</b></div>
+        <div class="kv"><span>Bank</span><b id="pay_bank">—</b></div>
+        <div class="kv"><span>Delivery cost</span><b id="pay_ship">—</b></div>
+        <div class="kv"><span>Goods total</span><b id="pay_goods">—</b></div>
+        <div class="kv"><span>Paid at</span><b id="pay_dt">—</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="itemsWrap" class="card" style="display:none; margin-top:14px;">
+    <h3 style="margin:0 0 8px 0;">Товары</h3>
+    <div class="muted" id="itemsCount">—</div>
+    <div style="overflow:auto;">
+      <table id="itemsTable">
+        <thead><tr><th>chrt_id</th><th>name</th><th>brand</th><th>size</th><th>price</th><th>total</th><th>status</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="raw" class="card" style="display:none; margin-top:14px;">
+    <h3 style="margin:0 0 8px 0;">Raw JSON</h3>
+    <pre class="json" id="rawJson"></pre>
+  </div>
+</main>
+
+<footer>WB Test</footer>
+
+<script src="static/script.js"></script>
+
+</body>
+</html>

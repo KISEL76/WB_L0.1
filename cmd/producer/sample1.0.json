@@ -1,0 +1,52 @@
+{
+  "order_uid": "test124",
+  "track_number": "WBILMTESTTRACK",
+  "entry": "WBIL",
+  "locale": "en",
+  "internal_signature": "",
+  "customer_id": "cust123",
+  "delivery_service": "meest",
+  "shardkey": "9",
+  "sm_id": 99,
+  "date_created": "2025-08-27T14:36:00Z",
+  "oof_shard": "1",
+
+  "delivery": {
+    "name": "John Doe",
+    "phone": "+1234567890",
+    "zip": "123456",
+    "city": "Moscow",
+    "address": "Red Square, 1",
+    "region": "Moscow",
+    "email": "john.doe@example.com"
+  },
+
+  "payment": {
+    "transaction": "trans123",
+    "request_id": "",
+    "currency": "USD",
+    "provider": "wbpay",
+    "amount": 100.50,
+    "payment_dt": "2025-08-27T14:35:00Z",
+    "bank": "Sber",
+    "delivery_cost": 5.50,
+    "goods_total": 95.00,
+    "custom_fee": 0
+  },
+
+  "items": [
+    {
+      "chrt_id": 12345,
+      "price": 95.00,
+      "rid": "item123",
+      "name": "T-Shirt",
+      "sale": 0,
+      "size": "L",
+      "total_price": 95.00,
+      "nm_id": 111,
+      "brand": "Orlan",
+      "status": 202,
+      "track_number": "WBILMTESTTRACK"
+    }
+  ]
+}
