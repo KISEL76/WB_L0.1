@@ -208,3 +208,37 @@ func (os *OrderStorage) Get(ctx context.Context, orderUID string) (*model.Order,
 	}
 	return &order, nil
 }
+
+func (os *OrderStorage) GetLastOrders(ctx context.Context, quantity int) ([]*model.Order, error) {
+	rows, err := os.db.pool.Query(ctx, `
+		SELECT order_uid
+		FROM orders
+		ORDER BY date_created DESC
+		LIMIT $1
+	`, quantity)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var uids []string
+	for rows.Next() {
+		var uid string
+		if err := rows.Scan(&uid); err != nil {
+			return nil, err
+		}
+		uids = append(uids, uid)
+	}
+
+	var orders []*model.Order
+	for _, uid := range uids {
+		o, err := os.Get(ctx, uid)
+		if err != nil {
+			return nil, err
+		}
+		if o != nil {
+			orders = append(orders, o)
+		}
+	}
+	return orders, nil
+}

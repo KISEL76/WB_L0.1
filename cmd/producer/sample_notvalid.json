@@ -1,0 +1,10 @@
+{
+  "order_uid": "bad123",
+  "track_number": "WBILMTESTBAD",
+  "entry": "WBIL",
+  "locale": "en"
+  "customer_id": "cust999",
+  "delivery_service": "meest",
+  "date_created": "2025-08-29T14:36:00Z",
+  "oof_shard": "1"
+}

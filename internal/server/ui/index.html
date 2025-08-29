@@ -22,13 +22,13 @@
     <div class="card" style="flex:1 1 360px;">
       <h3 style="margin:0 0 8px 0;">Заказ</h3>
       <div class="grid">
-        <div class="kv"><span>Order UID</span><b id="ord_uid">—</b></div>
-        <div class="kv"><span>Track</span><b id="ord_track">—</b></div>
-        <div class="kv"><span>Entry</span><b id="ord_entry">—</b></div>
-        <div class="kv"><span>Locale</span><b id="ord_locale">—</b></div>
-        <div class="kv"><span>Customer</span><b id="ord_customer">—</b></div>
-        <div class="kv"><span>Service</span><b id="ord_service">—</b></div>
-        <div class="kv"><span>Created</span><b id="ord_date">—</b></div>
+        <div class="kv"><span>UID Заказа</span><b id="ord_uid">—</b></div>
+        <div class="kv"><span>Трек-номер</span><b id="ord_track">—</b></div>
+        <div class="kv"><span>Канал (entry)</span><b id="ord_entry">—</b></div>
+        <div class="kv"><span>Язык</span><b id="ord_locale">—</b></div>
+        <div class="kv"><span>Клиент</span><b id="ord_customer">—</b></div>
+        <div class="kv"><span>Служба доставки</span><b id="ord_service">—</b></div>
+        <div class="kv"><span>Создан</span><b id="ord_date">—</b></div>
       </div>
     </div>
 
@@ -48,13 +48,13 @@
     <div class="card" style="flex:1 1 360px;">
       <h3 style="margin:0 0 8px 0;">Оплата</h3>
       <div class="grid">
-        <div class="kv"><span>Transaction</span><b id="pay_tx">—</b></div>
-        <div class="kv"><span>Amount</span><b id="pay_amount">—</b></div>
-        <div class="kv"><span>Currency</span><b id="pay_cur">—</b></div>
-        <div class="kv"><span>Bank</span><b id="pay_bank">—</b></div>
-        <div class="kv"><span>Delivery cost</span><b id="pay_ship">—</b></div>
-        <div class="kv"><span>Goods total</span><b id="pay_goods">—</b></div>
-        <div class="kv"><span>Paid at</span><b id="pay_dt">—</b></div>
+        <div class="kv"><span>Транзакция</span><b id="pay_tx">—</b></div>
+        <div class="kv"><span>Сумма</span><b id="pay_amount">—</b></div>
+        <div class="kv"><span>Валюта</span><b id="pay_cur">—</b></div>
+        <div class="kv"><span>Банк</span><b id="pay_bank">—</b></div>
+        <div class="kv"><span>Стоимость доставки</span><b id="pay_ship">—</b></div>
+        <div class="kv"><span>Всего товаров</span><b id="pay_goods">—</b></div>
+        <div class="kv"><span>Оплачено</span><b id="pay_dt">—</b></div>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
     <div class="muted" id="itemsCount">—</div>
     <div style="overflow:auto;">
       <table id="itemsTable">
-        <thead><tr><th>chrt_id</th><th>name</th><th>brand</th><th>size</th><th>price</th><th>total</th><th>status</th></tr></thead>
+        <thead><tr><th>chrt_id</th><th>товар</th><th>бренд</th><th>размер</th><th>цена</th><th>итог</th><th>статус</th></tr></thead>
         <tbody></tbody>
       </table>
     </div>
